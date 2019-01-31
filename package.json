@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "run-test": "webpack --mode=development --config webpack.node.js && node ./test/index.js",
+    "build-dev": "http-server & webpack --mode=development --watch ",
+    "build-prod": "webpack --mode=production",
+    "prepublish": "yarn build-prod"
+  },
+  "name": "mekacentral-js-sdk",
+  "version": "1.0.0",
+  "description": "Javascript SDK for MekaCentral API",
+  "main": "./build/index.js",
+  "author": "Reach Robotics",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.2.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^7.0.0-beta.3",
+    "webpack": "^4.28.1",
+    "webpack-command": "^0.4.2"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
